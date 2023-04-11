@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Write
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="../Home/home.html">Medium</a>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <link class="navbar-brand" href="#" id="user">
+                    </link>
+
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-dark" onclick="signout()">Sign Out</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Crawl time to load page -->
+    <div class="card-header text-dark">
+        <div><small class="text-secondary d-flex justify-content-end" id="load"></small></div> 
+    </div>
+
+    <!-- Form for creating a blog -->
+    <div class="card-body">
+        <form class="form-group" onsubmit="submitthearticle(event)">
+
+            <label for="exampleFormControlInput1"><strong>Title</strong></label>
+            <input type="text" name="title" class="form-control" id="title" required><br/>
+
+            <label for="exampleFormControlInput1"><strong>Details</strong></label>
+            <input type="text" name="details" class="form-control" id="details" required><br/>
+
+            <label for="exampleFormControlTextarea1"><strong>Blog (HTML)</strong></label>
+            <textarea name="blog" class="form-control" id="blog" rows="25" required></textarea><br/>
+
+            <label for="exampleFormControlInput1"><strong>Tags</strong></label>
+            <input type="text" name="tags" class="form-control" id="tags" required><br/>
+
+            <button class="form-control btn btn-outline-success my-2 my-sm-0"><strong>Submit the Article</strong></button>
+
+        </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <script src="./write.js"></script>
+</body>
+
+</html>

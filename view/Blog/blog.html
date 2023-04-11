@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!-- Desining the like an dislike button   -->
+  <style>
+    .res {
+      margin: 40px
+    }
+
+    button {
+      cursor: pointer;
+      outline: 0;
+      color: #AAA
+    }
+
+    .btn:focus {
+      outline: none
+    }
+
+    .green {
+      color: green
+    }
+
+    .red {
+      color: red
+    }
+  </style>
+  <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="../Home/home.html">Medium</a>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <link class="navbar-brand" href="#" id="user">
+          </link>
+
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-dark" onclick="signout()">Sign Out</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="card text">
+    <div class="card-header text-dark">
+
+      <!-- Creator of blog -->
+      <div><strong class="text-secondary" id="creator"> </strong></div>
+
+      <!-- Blog details -->
+      <div><small class="text-secondary" id="details"></small></div>
+
+      <!-- Crawl time to load page -->
+      <div><small class="text-secondary d-flex justify-content-end" id="load"></small></div>
+
+    </div>
+    <div class="card-body">
+      <!-- Title -->
+      <h1 class="card-title d-flex justify-content-center text-info"><strong id="title"></strong></h1></br>
+      <!-- Blog -->
+      <section id="blog">
+
+      </section>
+
+    </div>
+
+  </div></br></br>
+
+  <!-- Tags -->
+  <div class="text-center" id="listOfTags"><strong class="font-weight-bolder text-dark">Tags :- </strong>
+  </div>
+
+
+  <!-- Like and dislike buttons -->
+  <div class="res">
+    <button id="like" class="btn btn-success" disabled> 0 </button>
+    <button class="btn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>
+    <button class="btn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>
+    <button id="dislike" class="btn btn-danger" disabled> 0 </button>
+  </div>
+
+
+
+  <!-- Comments -->
+  <section style="background-color: #f7f6f6;">
+
+    <div class="container my-5 py-5 text-dark">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12 col-lg-10 col-xl-8">
+
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="text-dark mb-0">Comments(<span id="length">0</span>)</h4>
+            <div class="card">
+            </div>
+          </div>
+
+          <!-- Add Comments -->
+          <div class="form-outline mb-4">
+            <form onsubmit="addComment(event)">
+              <textarea name="comment" class="form-control" id="comment" rows="3" placeholder="Add a Comment ..." required></textarea>
+              <button class="btn btn-success">Add</button>
+            </form>
+          </div>
+
+          <!-- Display Comments -->
+          <div id="listOfComments">
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+  <script src="./blog.js"></script>
+</body>
+
+</html>
