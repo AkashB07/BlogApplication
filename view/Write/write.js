@@ -1,7 +1,7 @@
 let beforeCrawl = new Date();
 
-const url = 'http://localhost';
-// const url ='http://52.66.252.234';
+// const url = 'http://localhost';
+const url ='http://65.0.102.136';
 
 
 const token = localStorage.getItem('token');
