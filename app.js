@@ -95,7 +95,7 @@ BlogHistory.belongsTo(User);
 sequelize.sync()
 .then(()=>{
     //Listens to the connecton on specified port
-    app.listen(process.env.PORT);
+    app.listen(process.env.MYSQLPORT);
 })
 .catch(err=>{
     console.log(err)})
